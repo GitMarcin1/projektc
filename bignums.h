@@ -114,75 +114,66 @@ void sum()
 
 
 
-
-
-
 }
 
-
+//n ilosc komorek w tablicy liczby a
+//m ilosc komorek liczby b
 
 void sub()
 {
 
+//odejmowanie jesli liczba1 > liczba2
+    if(n>m || a[n-1]>b[n-1])
+    {
+
+    //odejmowanie kazdej komorki jak w odejmowaniu slupkowym
+        for(int i=0; i<n; i++)
+        {
+            if(a[i]>b[i])
+            {
+                w[i]=a[i]-b[i];
+            }
+            else // jesli komorka liczby1 jest mniejsza od komorki z liczby2 zapozyczamy z kolejnej
+                //komorki liczby1 jedynke i dodajemy jej wartosc do aktualnej komorki
+            {
+                a[i+1]=a[i+1]-1;
+                a[i]=a[i]+1000000000;
+                w[i]=a[i]-b[i];
+            }
+
+        }
+    }
+        else
+// jesli liczba ktora chcemy odjac jest wieksza od liczby od ktorej odejmujemy
+// zamieniamy je miejscami a wynik wypisujemy z minusem
+        {
+
+        for(int i=0; i<m; i++)
+        {
+            if(b[i]>a[i])
+            {
+                w[i]=b[i]-a[i];
+            }
+            else // jesli komorka liczby2 jest mniejsza od komorki z liczby1 zapozyczamy z kolejnej
+                //komorki liczby2 jedynke i dodajemy jej wartosc do aktualnej komorki
+            {
+                b[i+1]=b[i+1]-1;
+                b[i]=b[i]+1000000000;
+                w[i]=b[i]-a[i];
+            }
+
+        }
+
+        !printf -?
+
+        }
 
 
+    }
 
 
-
-
-
-
-}
-
-
-
-
-void mult()
-{
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-void div()
-{
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-void save(plik.txt)
-{
-
-
-
-
+    void mult()
+    {
 
 
 
@@ -194,6 +185,50 @@ void save(plik.txt)
 
 
 
-}
+
+
+
+
+    }
+
+
+    void div()
+    {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+    void save(plik.txt)
+    {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
 
 
